@@ -1,0 +1,107 @@
+
+<mvc:view
+controllerName="EVALUATION.Controller.task"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:table="sap.ui.table"
+xmlns:viz="sap.viz.ui5.controls"
+xmlns:commons="sap.ui.commons"
+xmlns:micro="sap.suite.ui.microchart"
+xmlns:core="sap.ui.core"
+xmlns:l="sap.ui.layout"
+xmlns="sap.m">           
+<App>
+<Page class="page">
+	<customHeader>
+		<Bar id="kraPageBar">
+			<contentLeft>			
+			<Image src="https://www.dailypioneer.com/uploads/2019/story/images/big/endgame-dhoni--2019-07-21.jpg" width="6vw" height="3vw" />	
+			</contentLeft>
+			<contentMiddle>
+		 		<Text text = "RITS Weather Monitoring Dashboard" />
+			</contentMiddle>
+			<contentRight>
+		 		<Text text = "" id="date"/>
+				<Text text = "" id="userName"/>
+    	             	        <Button text="" id = "logout" icon = "sap-icon://log" press="logout"/>
+			</contentRight>		
+		</Bar>
+	</customHeader>
+	<l:BlockLayout id="BlockdsLayoutTwo">
+		<l:BlockLayoutRow>
+			<l:BlockLayoutCell class="wcLabel" id="1fdg-1">
+		 		<Label text=" Select Location :" id="Label" class="headerFont"/>	
+				<ComboBox id="productInput" width="20%" placeholder="Enter Location">
+					<core:Item text="Pune"/>
+					<core:Item text="Mumbai" />
+					<core:Item  text="Chennai"/>
+				         	<core:Item text="Noida"/>
+				            <core:Item  text="Delhi"/>
+				            <core:Item  text="Jaipur"/>
+				            <core:Item  text="Hyderabad"/>
+				</ComboBox>
+				<Button text="Retrieve" press="SearchRecord" width="10%" id="retrieve" class="ButtonGap" />
+		
+ 			
+                                              <Button text = "" id="autorefresh" type="Reject" class="refresh" />
+			</l:BlockLayoutCell>
+		</l:BlockLayoutRow>
+	</l:BlockLayout>
+
+	<content>
+		<l:BlockLayout id="BlockLayoutTwo">
+
+			<l:BlockLayoutRow>
+				<l:BlockLayoutCell class="wc1" id="101">
+					<Text text="Humidity Current Value : "/>
+						<micro:RadialMicroChart size="M" id="microchart" percentage="{Weather>/humidity}"  class="sapUiSmallMargin"></micro:RadialMicroChart>
+					</l:BlockLayoutCell>
+				<l:BlockLayoutCell class="wc2" id="102">
+					<Text text="Temp Current Value : "/>
+		 			<Text text = "" id="TEMP" />
+				</l:BlockLayoutCell>
+			</l:BlockLayoutRow>
+			<l:BlockLayoutRow>
+				<l:BlockLayoutCell class="wcLabel" id="1-1">
+ 						<Bar id="ageBar">
+							<contentLeft>			
+							</contentLeft>
+							<contentMiddle>
+								<Text text = "Trend Curve for Humidity" id="kra4"/>
+							</contentMiddle>
+							<contentRight>
+							</contentRight>		
+						</Bar>
+
+					<viz:VizFrame xmlns="sap.viz" id="VizframelinenId" height="50vh" width="100%"/>
+				</l:BlockLayoutCell>
+			</l:BlockLayoutRow>
+			<l:BlockLayoutRow>
+				<l:BlockLayoutCell class="wcLabel" id="2-1">
+ 						<Bar id="ageBar1">
+							<contentLeft>			
+							</contentLeft>
+							<contentMiddle>
+								<Text text = "Trend Curve for Temp" id="k4"/>
+							</contentMiddle>
+							<contentRight>
+							</contentRight>		
+						</Bar>
+						<viz:VizFrame xmlns="sap.viz" id="VizframestackId" height="50vh" width="100%"/>
+				</l:BlockLayoutCell>
+			</l:BlockLayoutRow>
+		</l:BlockLayout>
+	</content>
+
+<footer>
+                    <OverflowToolbar>
+                        <ToolbarSpacer/>
+			<Label text="Created by VIGNESH" />
+			<Button  class="gap" icon="sap-icon://refresh"   text="REFRESH " press="onPressRefresh"/>
+                        <ToolbarSpacer/>
+                    </OverflowToolbar>
+	
+                </footer>
+</Page>
+</App>
+</mvc:view>

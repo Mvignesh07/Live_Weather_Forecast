@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<title>Weather Report</title>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+            <link rel="stylesheet" type="text/css" href="/XMII/CM/SMT_TRAINING/Vignesh/ME TASKS/EVALUATION/Css/Style.css" />
+	<link rel="icon" href="/XMII/CM/SMT_TRAINING/Vignesh/ME TASKS/EVALUATION/Images/weatherpic.png" />
+
+
+	<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		id="sap-ui-bootstrap"
+		data-sap-ui-libs="sap.m,sap.ui.ux3"
+		data-sap-ui-theme="sap_bluecrystal"
+		data-sap-ui-resourceroots='{
+		"EVALUATION": "./"}'>
+	</script>
+
+
+	<script>
+		var miiServerHost = location.protocol+'//'+document.location.host;
+		var i18nModel, i18nBundle;
+		var sLocale = sap.ui.getCore().getConfiguration().getLanguage();
+		sap.ui.localResources("View");
+		var app = new sap.m.App({initialPage:"task"});
+		var page = sap.ui.view({id:"task",  viewName:"EVALUATION.View.task",   type:sap.ui.core.mvc.ViewType.XML});
+		app.addPage(page);
+		app.placeAt("content");
+            </script>
+</head>
+<body class="sapUiBody " role="application" id="body">
+	<div id="content">
+		<input type="hidden" id="hidden_loginrole" value="{IllumLoginName}"> </input>
+		<input type="hidden" id="hidden_lastname" value="{lastname}"> </input>
+		<input type="hidden" id="hidden_firstname" value="{firstname}"> </input>
+	</div>
+</body>
+</html>
+
+
+</BODY>
+</HTML>

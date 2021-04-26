@@ -1,0 +1,67 @@
+.gap{
+	margin-left: 80% !important;
+	background : #5D6D7E !important;
+
+}
+
+#task--autorefresh{
+	margin-left: 38% !important;
+}
+
+
+#task--productInput-content
+{
+    width: 100%;
+    border-radius: 2rem;
+}
+#task--productInput-inner
+{
+    border-radius: 2rem;
+}
+
+
+
+#task--retrieve-inner
+{
+	width: 6rem;
+	border-radius: 2rem;
+}
+#task--retrieve-content
+{
+	    background-color: skyblue;
+    border-radius: 2rem;
+}
+
+#task--retrieve{
+    margin-left: 2% !important;
+   
+}
+
+.headerFont{
+	margin-right : 1% !important;
+	Font-size: 120% !important;
+}
+
+.wc1{
+	margin-left: 5% !important;
+}
+
+.wc2{
+	margin-left: 15% !important;
+}
+
+.page{
+	background: #EBDEF0 !important;
+}
+
+#task--TEMP {
+	font-weight:700;
+}
+
+#task--Label{
+	 font-weight:600;
+}
+
+#task--userName{
+	font-weight:600;
+}
